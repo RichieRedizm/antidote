@@ -1,5 +1,5 @@
 ;(global => {
-	var Framework = function(input) {
+	var Framework = input => {
 		return new Framework.init(input)
 	}
 	Framework.prototype = {
@@ -15,7 +15,14 @@
 		render: function(input) {
 			let content = document.querySelector(input)
 			content.innerHTML = this.template
+			this.addEvents()
 			return this
+		},
+		addEvents: function() {
+			const clear = document.querySelector('[data-event="click:clearTitle"]')
+			clear.addEventListener('click', this.clearTitle)
+			const keyUp = document.querySelector('[data-event="keyup:titleChanged"]')
+			keyUp.addEventListener('keyup', this.titleChanged)
 		}
 	}
 	Framework.init = function(input) {
