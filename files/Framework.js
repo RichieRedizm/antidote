@@ -12,7 +12,6 @@ const Framework = input => {
 */
 Framework.prototype = {
   create: function() {
-    console.log('create', this)
     // remove hash as not required
     const templateName = this.template.replace('#', '')
     // get the template
