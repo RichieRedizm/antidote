@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`if given an some input, Framework object is created with defaults 1`] = `
+Object {
+  "clearTitle": "",
+  "data": Object {
+    "title": "Antidote",
+  },
+  "template": "",
+  "titleChanged": "",
+}
+`;
+
+exports[`if given correct input, Framework object is created 1`] = `
+Object {
+  "clearTitle": [Function],
+  "data": Object {
+    "title": "Antidote",
+  },
+  "template": "#header-template",
+  "titleChanged": [Function],
+}
+`;
+
+exports[`if given no input, Framework init returns null 1`] = `Object {}`;
